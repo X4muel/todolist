@@ -1,0 +1,70 @@
+/* Estilos básicos para centralizar e dar corpo */
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f9;
+    padding-top: 50px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Regras de scroll que resolvemos */
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    
+    /* --------------------------------- */
+    /* ATENÇÃO: As regras que criam o scroll interno */
+    max-height: 350px; /* Define a altura máxima da lista */
+    overflow-y: auto;  /* Adiciona a barra de rolagem vertical se necessário */
+    overflow-x: hidden;
+    /* --------------------------------- */
+}
+
+/* Estilo para cada item da lista */
+.task-list li {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s;
+}
+
+.task-list li:last-child {
+    border-bottom: none;
+}
+
+.task-list li input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.task-list li p {
+    flex-grow: 1;
+    margin: 0;
+    transition: text-decoration 0.3s;
+}
+
+/* Estilo para tarefa concluída */
+.task-list li.completed p {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task-list li .remover-task {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8em;
+    margin-left: auto;
+}
